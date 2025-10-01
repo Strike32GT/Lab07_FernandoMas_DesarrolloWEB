@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lista de Usuarios</title>
+    <link rel="stylesheet" href="{% static 'css/list_users.css' %}">
+</head>
+
+<body>
+    <h1>Usuarios Registrados</h1>
+
+    <div class="card">
+    <ul class="user-list">
+        {% for usuario in usuarios %}
+        <li>
+            <div class="user-info">
+                <span class="user-name">{{ usuario.nombre }}</span>
+                <span class="user-email">{{ usuario.email }}</span>
+            </div>
+
+            <div class="actions">
+                <a href="{% url 'editar_usuario' usuario.id %}" class="btn btn-edit">Editar</a>
+                <a href="{% url 'eliminar_usuario' usuario.id %}" class="btn btn-delete"
+                    onclick="return confirm('¿Seguro que quieres eliminar a {{ usuario.nombre }}?');">Eliminar</a>
+            </div>
+        </li>
+        {% empty %}
+        <li class="empty">No hay usuarios registrados aún.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'crear_usuario' %}" class="btn-add">Crear nuevo usuario</a>
+    </div>
+    
+</body>
+</html>

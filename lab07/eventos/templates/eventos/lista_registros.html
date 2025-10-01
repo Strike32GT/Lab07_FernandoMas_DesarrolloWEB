@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Registros</title>
+    <link rel="stylesheet" href="{% static 'css/list_register.css' %}">
+</head>
+<body>
+    <h1>Registros de Participación</h1>
+
+    <div class="card">
+    <ul class="registro-list">
+        {% for registro in registros %}
+            <li>
+                <div class="registro-info">
+                    <span class="usuario">Usuario: {{ registro.usuario.nombre }} </span>
+                    <span class="usuario">Evento: {{ registro.evento.titulo }} </span>
+                </div>
+                <div class="actions">
+                    <a href="{% url 'eliminar_registro' registro.id %}" class="btn btn-delete"
+                    onclick="return confirm('¿Seguro que quieres eliminar este registro?');">Eliminar</a>
+                </div>    
+            </li>
+        {% empty %}
+            <li class="empty">No hay registros todavía.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'crear_registro' %}" class="btn-add">Registrar nuevo</a>
+</body>
+</html>

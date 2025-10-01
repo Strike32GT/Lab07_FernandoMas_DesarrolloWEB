@@ -1,0 +1,103 @@
+/* Fondo y fuente */
+body {
+  background-color: #f4f6f8;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  color: #2c3e50;
+}
+
+/* Contenedor del formulario */
+.form-container {
+  max-width: 450px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  border-top: 5px solid #3498db;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  color: #34495e;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+/* Labels y campos */
+form p {
+  margin-bottom: 15px;
+  text-align: center; /* para centrar los campos */
+}
+
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Ajuste de ancho de inputs */
+form input,
+form select {
+  width: 80%;              /* más angosto */
+  max-width: 300px;        /* límite máximo */
+  padding: 8px 10px;
+  border: 1px solid #ccd1d9;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border 0.3s, box-shadow 0.3s;
+  display: block;
+  margin: 0 auto;          /* centrado */
+}
+
+/* Foco en campos */
+form input:focus,
+form select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 4px rgba(52, 152, 219, 0.3);
+  outline: none;
+}
+
+/* Botón Guardar */
+.btn {
+  display: block;
+  width: 85%;
+  max-width: 320px;
+  margin: 15px auto 0 auto;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.02);
+}
+
+/* Botón de volver */
+.btn-back {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #3498db;
+  font-weight: bold;
+}
+
+.btn-back:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}

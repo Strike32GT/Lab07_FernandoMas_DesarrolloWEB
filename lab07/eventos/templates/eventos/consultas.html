@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultas</title>
+  <link rel="stylesheet" href="{% static 'css/consultas.css' %}">
+</head>
+
+<body>
+  <h1>Consultas Avanzadas</h1>
+  <div class="card">
+    <h2>Usuarios más activos</h2>
+    <ul>
+      {% for usuario in usuarios_activos %}
+      <li>{{ usuario.nombre }} - {{ usuario.num_eventos }} registros</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Eventos de este mes</h2>
+    <ul>
+      {% for evento in eventos_mes %}
+      <li>{{ evento.titulo }} - {{ evento.fecha }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</body>
+
+</html>

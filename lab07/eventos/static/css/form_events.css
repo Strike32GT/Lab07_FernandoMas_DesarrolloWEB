@@ -1,0 +1,122 @@
+body {
+  background-color: #f4f6f8;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  color: #2c3e50;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  border-top: 5px solid #3498db;
+}
+
+h1 {
+  text-align: center;
+  color: #34495e;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+form p {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+/* Inputs de texto normales */
+form input[type="text"],
+form input[type="date"] {
+  width: 90%;
+  max-width: 380px;
+  padding: 8px 10px;
+  border: 1px solid #ccd1d9;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border 0.3s, box-shadow 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Select (Organizador) más compacto */
+form select {
+  width: 70%;
+  max-width: 280px;
+  padding: 8px 10px;
+  border: 1px solid #ccd1d9;
+  border-radius: 5px;
+  font-size: 14px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Textarea más controlado */
+form textarea {
+  width: 90%;
+  max-width: 380px;
+  min-height: 80px;
+  max-height: 200px;
+  padding: 8px 10px;
+  border: 1px solid #ccd1d9;
+  border-radius: 5px;
+  font-size: 14px;
+  resize: vertical;
+  display: block;
+  margin: 0 auto;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 4px rgba(52, 152, 219, 0.3);
+  outline: none;
+}
+
+/* Botón */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.01);
+}
+
+.btn-back{
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #3498db;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.btn-back:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}

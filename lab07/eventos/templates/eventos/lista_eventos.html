@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de eventos</title>
+  <link rel="stylesheet" href="{% static 'css/list_events.css' %}">
+</head>
+<body>
+
+  <h1>Lista de eventos</h1>
+  <div class="table-container">
+    <a href="{% url 'crear_evento' %}">Crear nuevo evento</a>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>    
+          <th>Titulo</th>    
+          <th>Fecha</th>    
+          <th class="actions">Acciones</th>  
+        </tr>
+      </thead>
+      <tbody>
+        {% for evento in eventos %}
+        <tr>
+          <td>{{ evento.id }}</td>
+          <td>{{ evento.titulo }}</td>
+          <td>{{ evento.fecha }}</td>
+          <td class="actions">
+            <a href="{% url 'editar_evento' evento.id %}">Editar</a>
+            <a href="{% url 'eliminar_evento' evento.id %}">Eliminar</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>          
+</body>
+</html>
+
+
+
+
+

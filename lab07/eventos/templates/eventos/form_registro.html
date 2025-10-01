@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registrar nuevo</title>
+  <link rel="stylesheet" href="{% static 'css/form_register.css' %}">
+</head>
+<body>
+  <h1>Registrar nuevo</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn">Guardar</button>
+  </form>
+  <a href="{% url 'lista_registros' %}" class="btn-back">⬅ Volver a la lista</a>
+</body>
+</html>
